@@ -59,7 +59,6 @@ local map_rt_mat = CreateMaterial( "GTA_Radar!!!", "UnlitGeneric", { ["$basetext
 
 
 hook.Add( "HUDPaint", "GTA Radar", function()
-
 	local ply = LocalPlayer()
 
 	if not IsValid( ply ) then
@@ -117,7 +116,6 @@ hook.Add( "HUDPaint", "GTA Radar", function()
 							y = 0,
 							w = RADAR_RADIUS * 2,
 							h = RADAR_RADIUS * 2,
-							drawviewmodel = false,
 							ortho = true,
 							ortholeft = -300,
 							orthoright = 300,
@@ -193,5 +191,15 @@ hook.Add( "PreDrawSkyBox", "GTA Radar", function()
 		return true
 
 	end
+
+end )
+
+hook.Add( "ShouldDrawLocalPlayer", "Radar", function()
+
+    if rendering_map then
+
+        return true
+
+    end
 
 end )
