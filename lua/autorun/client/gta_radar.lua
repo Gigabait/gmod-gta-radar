@@ -59,6 +59,7 @@ local map_rt_mat = CreateMaterial( "GTA_Radar!!!", "UnlitGeneric", { ["$basetext
 
 
 hook.Add( "HUDPaint", "GTA Radar", function()
+
 	local ply = LocalPlayer()
 
 	if not IsValid( ply ) then
