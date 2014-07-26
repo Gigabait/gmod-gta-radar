@@ -105,7 +105,7 @@ hook.Add( "HUDPaint", "GTA Radar", function()
 
 				cam.Start2D()
 
-					local pos = EyePos()
+					local pos = EyePos() + Vector( 0, 0, 100 )
 					local ang = Angle( 90, EyeAngles().y, 0 )
 
 					rendering_map = true
@@ -121,7 +121,7 @@ hook.Add( "HUDPaint", "GTA Radar", function()
 							ortholeft = -300,
 							orthoright = 300,
 							orthotop = -300,
-							orthobottom = 300,
+							orthobottom = 300
 						}
 
 					rendering_map = false
