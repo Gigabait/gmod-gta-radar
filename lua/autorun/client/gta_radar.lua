@@ -25,7 +25,7 @@ local function GenerateCircleVertices( x, y, radius, ang_start, ang_size )
 end
 
 
-local RADAR_RADIUS = math.Clamp( math.floor( ScrH() / 8.5 ), 80, 256 )
+local RADAR_RADIUS = math.Clamp( math.floor( ScrH() / 7.5 ), 80, 256 )
 local RADAR_X, RADAR_Y = RADAR_RADIUS + 32, RADAR_RADIUS + 32
 local RADAR_BARSIZE = RADAR_RADIUS / 9
 local RADAR_LINESIZE = 3 -- Outline and inline
@@ -54,8 +54,8 @@ local armor_last = 0
 local tex_white = surface.GetTextureID( "vgui/white" )
 
 local rendering_map = false
-local map_rt = GetRenderTarget( "GTARadar!", RADAR_RADIUS * 2, RADAR_RADIUS * 2, true )
-local map_rt_mat = CreateMaterial( "GTA_Radar!", "UnlitGeneric", { ["$basetexture"] = "GTARadar!" } )
+local map_rt = GetRenderTarget( "GTARadar!!!", RADAR_RADIUS * 2, RADAR_RADIUS * 2, true )
+local map_rt_mat = CreateMaterial( "GTA_Radar!!!", "UnlitGeneric", { ["$basetexture"] = "GTARadar!!!" } )
 
 
 hook.Add( "HUDPaint", "GTA Radar", function()
